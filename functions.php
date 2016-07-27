@@ -13,4 +13,52 @@ register_nav_menus(array(
     'main' => 'Main Nav',
     'footer' => 'Footer Nav'
 ));
+
+
+
+//Create fuction for Flexslider
+function get_flexslider(){
+    
+    //get attachments
+    $attachments = get_children( array(
+        'post_parent' => get_the_ID(),
+        'post_type' => 'attachment',
+        'order' => 'ASC'
+    ));
+    
+    //start slider 
+    $slider .='
+    <!-- Start Flexslider -->
+    <div class="flexslider">
+        <ul class="slides">
+    ';
+    
+    //get conditional slider
+    if($attachments){
+        foreach ($attachments as $attachment_id => $attachment){
+            $theUrl = wp_get_attachment_url($attachment_id);
+            $theCaption = get_post_field('post_excerpt', $attachment->ID);
+            $slider .='
+            <li data-thumb="'.$theUrl.'">
+                <img src="'.$theUrl.'" alt="slider1"/>
+                <p>'.$theCaption.'</p>
+            </li>
+            ';
+        }
+    }
+    
+    //end slider
+    $slider .='
+        </ul>
+    </div>
+    <!-- End Flexslider -->
+    ';
+    
+    //return slider
+    return $slider;
+    
+}
+
+add_shortcode( 'flexslider', 'get_flexslider');
+
 ?>

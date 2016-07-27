@@ -125,7 +125,8 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 .container{
-    width: 960px;
+    max-width: 960px;
+    width: 100%;
     margin: 0 auto;
     overflow: auto;
     /*temp*/
@@ -174,6 +175,7 @@ header{
 ul#menu-main{
     overflow: hidden;
     text-align: center;
+    height: 40px;
 }
 
 ul#menu-main > li {
@@ -182,7 +184,7 @@ ul#menu-main > li {
 
 ul#menu-main > li > a{
     display: block;
-    padding: 20px;
+    padding: 10px;
 }
 
 ul#menu-main > li:hover .sub-menu{
@@ -195,22 +197,24 @@ ul#menu-main > li:hover .sub-menu{
     position: absolute;
     text-align: left;
     background-color: #ffffff;
+    z-index: 5;
 }
 
 .sub-menu > li{
     display: block;
+    
 }
 
 .sub-menu > li > a {
     display: block;
-    padding: 16px;
+    padding: 10px;
     border: 1px dashed #666666;
 }
 
 /* Carousel
 -------------------------------------------------------------- */
-.carousel img{
-    width: 100%;
+.slider_container{
+    overflow: hidden;
 }
 
 /* Main Section
@@ -226,12 +230,15 @@ section, aside{
 
 .main_section{
     float: left;
-    width: 640px;
+    max-width: 640px;
+    width: 66.66666%;
+    
 }
 
 aside{
     float: right;
-    width: 320px;
+    max-width: 320px;
+    width: 33.33333%;
 }
 
 .main-cta{
@@ -250,11 +257,14 @@ aside{
 
 /* Aside
 -------------------------------------------------------------- */
+aside{
+    overflow: hidden;
+}
 aside .row{
     margin-bottom: 20px;
 }
 
-.side-cta{
+.widget, .side-cta{
     width: 100%;   
 }
 
@@ -268,6 +278,7 @@ footer{
     /*temp*/
     border: 1px solid #666666;
     box-sizing: border-box;
+    font-size: small;
 }
 
 .left_footer{
@@ -291,4 +302,24 @@ footer{
 }
 #menu-footer li:last-child::after{
     content: none;
+}
+
+/* Design for Mobile
+-------------------------------------------------------------- */
+@media screen and (max-width: 600px){
+    .main_section, aside{
+        float: none;
+        max-width: none;
+        width: 100%;
+    }
+    .main-cta{
+        width: 100%;
+    }
+    .side-cta{
+        display: none;   
+    }
+    
+    footer nav{
+        display: none;
+    }
 }

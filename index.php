@@ -12,6 +12,7 @@
 
     <!-- Style Sheets -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory')?>/css/flexslider.css">
     
     <!-- HTML5 shiv -->
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -36,18 +37,15 @@
     
 <div class="row">
     <nav><?php wp_nav_menu(array(
-        'theme_location' => 'main'
+        'theme_location' => 'main_menu'
     )); ?></nav>
 </div>
 <!-- end header-->
 
 <!-- start carousel -->
 <section>
-    <div class="row">
-        <div class="carousel">
-            <!-- Find image attachments with tag carousel from the page--> 
-            <img class="logo" alt="logo" src="<?php bloginfo('template_directory')?>/img/carousel1.jpg">
-        </div>
+    <div class="row slider_container">
+        <?php echo get_flexslider(); ?>
     </div>
 </section>
 <!-- end carousel -->
@@ -74,8 +72,7 @@
 <aside>
     <div class="row">
         <h2>Calendar</h2>
-        <img class="side-cta" alt="widget" src="<?php bloginfo('template_directory')?>/img/calendar_widget.jpg">
-        <img class="side-cta" alt="widget" src="<?php bloginfo('template_directory')?>/img/calendar_widget.jpg">
+        <img class="widget" alt="widget" src="<?php bloginfo('template_directory')?>/img/calendar_widget.jpg">
     </div>
     <div class="row">
         <img class="side-cta" alt="widget" src="<?php bloginfo('template_directory')?>/img/side_ticket.jpg">
@@ -111,9 +108,15 @@
 </footer>
 <!-- end footer -->
 
-<!-- start cripts -->
-<script src="js/scripts.js"></script>
-<!-- end cripts -->
+<!-- start scripts -->
+<script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+<script src="<?php bloginfo('template_directory')?>/js/jquery.flexslider.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $(window).load(function() {
+        $('.flexslider').flexslider();
+    });
+</script>
+<!-- end scripts -->
 
 </div>
 </body> 
