@@ -129,38 +129,26 @@ body{
     width: 100%;
     margin: 0 auto;
     overflow: auto;
-    /*temp*/
     box-sizing: border-box;
-    background-color: #dddddd;
 }
 
 .row{
-    background-color: #ffffff;
     clear:both;
     width: 100%;
     overflow: auto;
-    /*temp*/
-    border: 1px dashed #666666;
-    box-sizing: border-box;
 }
 
 a:link, a:visited, a:hover{
     text-decoration: none;
-    color: #666666;
+    color: #ffffff;
 }
 
-a:hover{
-    color: #000000;
-}
 /* header
 -------------------------------------------------------------- */
 header{
-    background-color: #ffffff;
+    background-color: #000000;
     padding: 20px;
-    /*temp*/
-    border: 1px solid #666666;
-    border-bottom: none;
-    box-sizing: border-box;
+    color: #ffffff;
 }
 .left_header{
     float:left;
@@ -176,15 +164,22 @@ ul#menu-main{
     overflow: hidden;
     text-align: center;
     height: 40px;
+    background-color: #521620;
 }
 
-ul#menu-main > li {
+ul#menu-main > li{
     display: inline-block;
+    height: inherit;
+    padding: -10px;
 }
 
 ul#menu-main > li > a{
     display: block;
     padding: 10px;
+}
+
+ul#menu-main > li:hover, ul#menu-main > li.current-menu-item{
+    background-color: #83766d;
 }
 
 ul#menu-main > li:hover .sub-menu{
@@ -196,7 +191,7 @@ ul#menu-main > li:hover .sub-menu{
     display: none;
     position: absolute;
     text-align: left;
-    background-color: #ffffff;
+    background-color: #521620;
     z-index: 5;
 }
 
@@ -208,37 +203,35 @@ ul#menu-main > li:hover .sub-menu{
 .sub-menu > li > a {
     display: block;
     padding: 10px;
-    border: 1px dashed #666666;
 }
 
 /* Carousel
 -------------------------------------------------------------- */
 .slider_container{
     overflow: hidden;
+    padding-top: 20px;
 }
 
 /* Main Section
 -------------------------------------------------------------- */
 section, aside{
-    background-color: #ffffff;
-    padding: 20px;
-    /*temp*/
-    border: 1px solid #666666;
-    border-bottom: none;
-    box-sizing: border-box;
+
 }
 
 .main_section{
     float: left;
     max-width: 640px;
     width: 66.66666%;
-    
+    padding: 20px 20px 20px 0;
+    box-sizing: border-box;
 }
 
 aside{
     float: right;
     max-width: 320px;
     width: 33.33333%;
+    padding: 20px 0 20px 20px;
+    box-sizing: border-box;
 }
 
 .main-cta{
@@ -271,14 +264,11 @@ aside .row{
 /* Footer
 -------------------------------------------------------------- */
 footer{
-    background-color: #ffffff;
+    background-color: #000000;
     clear:both;
     padding: 20px;
     overflow: auto;
-    /*temp*/
-    border: 1px solid #666666;
-    box-sizing: border-box;
-    font-size: small;
+    color: white;
 }
 
 .left_footer{
