@@ -31,12 +31,18 @@
         <div class="left_header">
             <a href="<?php bloginfo('url');?>"><img class="logo" alt="logo" src="<?php bloginfo('template_directory')?>/img/logo.jpg"></a>
         </div>
+        <nav>
+        <?php wp_nav_menu(array(
+            'theme_location' => 'top'
+        )); ?>
+        </nav>
+        <!--
         <div class="right_header">
             <a href="" target="_blank">Ticket</a> |
             <a href="" target="_blank">Donate</a> |
             <a href="" target="_blank">Special Event</a> |
             <a href="" target="_blank">Facebook</a>
-        </div>
+        </div>-->
     </div>
 </header>
     

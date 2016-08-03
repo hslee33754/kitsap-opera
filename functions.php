@@ -11,7 +11,16 @@ Version: 1.0
 register_nav_menus(array(
     //*menu location slugs (key) => descriptions (according value)
     'main' => 'Main Nav',
-    'footer' => 'Footer Nav'
+    'footer' => 'Footer Nav',
+    'top' => 'Top Nav'
+));
+
+//Register Sidebar
+register_sidebars(1, array(
+    'before_title' =>'<h2>',
+    'after_title' =>'</h2>',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
 ));
 
 

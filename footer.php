@@ -1,17 +1,17 @@
 <!-- start footer -->
-<footer>
+<footer id="main_footer">
     <div class="left_footer">
         <img class="logo" alt="logo" src="<?php bloginfo('template_directory')?>/img/logo.jpg">
-        <p><small>Copyright &copy; <?php echo date('Y'); ?>, Kitsap Peninsula Opera Guild. ALL RIGHTS RESERVED. | <?php wp_loginout();?></small> </p>
+        <p><small>Copyright &copy; <?php echo date('Y'); ?>, Kitsap Peninsula Opera Guild. | <?php wp_loginout();?></small> </p>
     </div>
     <div class="right_footer">
-        <address>
+        <small><address>
             <class="tel">(360) 337-8199</class><br/>
             P.O. Box 1071, Bremerton, WA 98337
-        </address>
-        <nav><?php wp_nav_menu(array(
+        </address></small>
+        <small><nav><?php wp_nav_menu(array(
         'theme_location' => 'footer'
-    )); ?></nav>
+    )); ?></nav></small>
     </div>
 </footer>
 <!-- end footer -->
