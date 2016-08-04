@@ -17,13 +17,28 @@
         <?php endwhile; endif; ?>
     </div>
     <div class="row">
-        <img class="main-cta" alt="ticket" src="<?php bloginfo('template_directory')?>/img/main_ticket.jpg">
-        <img class="main-cta" alt="donate" src="<?php bloginfo('template_directory')?>/img/main_donate.jpg">
+        <a hre="#">
+            <div class="main-cta">
+                <div id="main-cta-ticket">
+                    <p class="centered-text">Buy Tickets</p>
+                </div>
+            </div>
+        </a>
+        <a hre="#">
+            <div class="main-cta">
+                <div id="main-cta-donate">
+                    <p class="centered-text">Donate Now</p>
+                </div>
+            </div>
+        </a>
     </div>
-    <dlv class="row">
-        <img class="responsive_video" alt="video placeholder" src="<?php bloginfo('template_directory')?>/img/video.jpg">
-        <!-- find a video attachment from the page -->
-    </dlv>
+    
+    <!-- Short link for responsive youtube video is available on the wp editor: [youtube link="I8ENtW-5tQY"] -->
+    <?php echo get_youtube_video( array(
+        'link' => 'I8ENtW-5tQY'
+    ))?>
+    
+
 </section>
 <!-- end content-->
 

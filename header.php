@@ -13,6 +13,7 @@
     <!-- Style Sheets -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <link rel="stylesheet" href="<?php bloginfo('template_directory')?>/css/flexslider.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
     
     <!-- HTML5 shiv -->
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -36,6 +37,7 @@
             'theme_location' => 'top'
         )); ?>
         </nav>
+        
         <!--
         <div class="right_header">
             <a href="" target="_blank">Ticket</a> |

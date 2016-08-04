@@ -115,7 +115,9 @@ a img.aligncenter {
 
 /* Custom Style 
 -------------------------------------------------------------- */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,700);
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:500);
 
 *{
     margin: 0;
@@ -123,14 +125,26 @@ a img.aligncenter {
 }
 
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Merriweather', serif;
+    font-size: 1.17em;
 }
 h1, h2, h3, h4, h5, h6{
-    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
+
+h2{
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+
+h2:first-child{
+    margin-top: 0;
+}
+
 p {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
+
 .container{
     max-width: 960px;
     width: 100%;
@@ -153,6 +167,7 @@ a:link, a:visited, a:hover{
 /* header
 -------------------------------------------------------------- */
 header{
+    font-family: 'Raleway', sans-serif;
     background-color: #000000;
     padding: 20px;
     color: #ffffff;
@@ -182,10 +197,11 @@ header{
 /* nav
 -------------------------------------------------------------- */
 ul#menu-main{
+    font-family: 'Raleway', sans-serif;
     overflow: hidden;
     text-align: center;
     height: 40px;
-    background-color: #521620;
+    background-color: #4f161e;
 }
 
 ul#menu-main > li{
@@ -212,7 +228,7 @@ ul#menu-main > li:hover .sub-menu{
     display: none;
     position: absolute;
     text-align: left;
-    background-color: #521620;
+    background-color: #4f161e;
     z-index: 5;
 }
 
@@ -256,17 +272,57 @@ aside{
 }
 
 .main-cta{
+    overflow: hidden;
+    width: 50%;
+    float: left;
     margin-top: 20px;
     margin-bottom: 20px;
     float: left;
 }
 
-.main-cta:last-child{
-    float: right;
+#main-cta-ticket{
+    height: 60px;
+    background-color: #4f161e;
+    margin-right: 20px;
 }
 
-.responsive_video{
+#main-cta-donate{
+    height: 60px;
+    margin-left: 20px;
+    background-color: #7e776b;
+}
+
+p.centered-text{
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+#main-video{
     width: 100%;
+}
+
+/* Responsive Video
+-------------------------------------------------------------- */
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 /* Aside
@@ -278,13 +334,97 @@ aside .row{
     margin-bottom: 20px;
 }
 
-.widget, .side-cta{
+/* Widget Styles
+-------------------------------------------------------------- */
+.widget{
+    margin-bottom: 20px;
     width: 100%;   
+}
+
+.widget:last-child{
+    margin-bottom: 0;
+}
+
+.widget_text h2{
+    display: none;
+}
+
+.widget_text p:first-child{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.side-cta{
+    width: 100%;
+    display: block;
+}
+
+#side-cta-ticket{
+    background-color: #4f161e;
+    height: 120px;
+}
+
+
+/* Contact Form Styles
+-------------------------------------------------------------- */
+.textwidget .wpcf7{
+    padding: 20px;
+    background-color: #7e776b;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.textwidget .wpcf7::before{
+    content: 'Contact Us';
+    font-size: 2.5rem;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.textwidget .wpcf7 h2{
+    text-align: center;
+}
+
+.textwidget .wpcf7 p{
+    margin: 0;
+}
+
+.textwidget .wpcf7 input[type="text"], .textwidget .wpcf7 input[type="email"]{
+    height: 30px;
+    width: 100%;
+    padding: 0 12px;
+    margin: 6px 0;
+    box-sizing: border-box;
+}
+
+.textwidget .wpcf7 textarea{
+    font-family: sans-serif;
+    width: 100%;
+    padding: 6px 12px;
+    margin: 6px 0;
+    box-sizing: border-box;
+}
+
+.textwidget .wpcf7 input[type="submit"] {
+    background: #EDEDED;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 8px 10px;
+    line-height: 1.2em;
+    font-size: 14px;
+}
+
+/* Donation Plug-in Overwrites
+-------------------------------------------------------------- */
+div.mfp-content fieldset ol{
+    margin-left: 20px;
 }
 
 /* Footer
 -------------------------------------------------------------- */
 footer#main_footer{
+    font-family: 'Raleway', sans-serif;
     width: 100%;
     box-sizing: border-box;
     background-color: #000000;
@@ -295,20 +435,21 @@ footer#main_footer{
 }
 
 #main_footer .left_footer{
-    width: 50%;
     box-sizing: border-box;
     float: left;
 }
 
 #main_footer .right_footer{
-    width: 50%;
     box-sizing: border-box;
     float: right;
     text-align: right;
 }
 
+#main_footer .logo{
+    width: 175px;
+}
 #menu-footer{
-    margin-top: 20px;
+    margin-top: 10px;
     list-style: none;
 }
 #menu-footer li{
@@ -320,6 +461,16 @@ footer#main_footer{
 #menu-footer li:last-child::after{
     content: none;
 }
+
+/* Design for small desktop / tablet
+-------------------------------------------------------------- */
+@media screen and (max-width: 960px){
+    .main_section{
+        padding-left: 20px;
+    }
+    aside{
+        padding-right: 20px;
+    }
 
 /* Design for Mobile
 -------------------------------------------------------------- */
@@ -333,9 +484,13 @@ footer#main_footer{
         max-width: none;
         width: 100%;
         padding: 10px 10px 0 10px;
+    } 
+    #main-cta-ticket{
+        margin-right: 10px;
     }
-    .main-cta{
-        width: 100%;
+
+    #main-cta-donate{
+        margin-left: 10px;
     }
     .side-cta{
         display: none;   
@@ -350,6 +505,5 @@ footer#main_footer{
         clear: both;
         text-align: center;
     }
-    
     
 }
