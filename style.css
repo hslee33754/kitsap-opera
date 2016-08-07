@@ -212,7 +212,7 @@ ul#menu-main > li{
 
 ul#menu-main > li > a{
     display: block;
-    padding: 10px;
+    padding: 8px 10px;
 }
 
 ul#menu-main > li:hover, ul#menu-main > li.current-menu-item{
@@ -224,7 +224,7 @@ ul#menu-main > li:hover .sub-menu{
 }
 
 
-.sub-menu{
+ul.sub-menu{
     display: none;
     position: absolute;
     text-align: left;
@@ -232,14 +232,26 @@ ul#menu-main > li:hover .sub-menu{
     z-index: 5;
 }
 
-.sub-menu > li{
+ul.sub-menu > li{
     display: block;
-    
+    box-sizing: border-box;
 }
 
-.sub-menu > li > a {
+ul.sub-menu > li.current-menu-item{
+    background-color: #7e776b;
+}
+
+ul.sub-menu > li:hover{
+    background-color: #7e776b;
+}
+
+ul.sub-menu > li > a {
     display: block;
-    padding: 10px;
+    padding: 8px 10px;
+}
+
+.right_header > #nav_btn{
+    display: none;
 }
 
 /* Carousel
@@ -506,4 +518,41 @@ footer#main_footer{
         text-align: center;
     }
     
+    /* Responsive Nav */
+    .right_header > #nav_btn{
+        display: block;
+    }
+
+    ul#menu-main{
+        display: none;
+        height: auto;
+        overflow: visible;
+        text-align: left;
+    }
+
+    ul#menu-main > li{
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #7e776b;
+        box-sizing: border-box;
+    }
+
+    ul#menu-main > li > a{
+        padding-left: 20px;
+    }
+
+    ul#menu-main > li.current-menu-parent{
+        background-color: #a10a0f;
+    }
+
+    ul.sub-menu{
+        display: block; /* Decides the default display option */
+        position: relative;
+        font-size: 0.8em;
+    }
+
+    ul.sub-menu > li > a {
+        padding-left: 30px;
+    }
+
 }

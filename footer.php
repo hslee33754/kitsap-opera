@@ -17,8 +17,6 @@
 <!-- end footer -->
 
 <!-- start scripts -->
-<script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
-<script src="<?php bloginfo('template_directory')?>/js/jquery.flexslider.js"></script>
 <script type="text/javascript" charset="utf-8">
     $(window).load(function() {
         $('.flexslider').flexslider();

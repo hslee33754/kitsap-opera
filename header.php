@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="<?php bloginfo('template_directory')?>/css/flexslider.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
     
+    <!--- Embed Font Awesome, Jquery, Flexslider -->
+    <script src="https://use.fontawesome.com/e1f89c6389.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+    <script src="<?php bloginfo('template_directory')?>/js/jquery.flexslider.js"></script>
+
     <!-- HTML5 shiv -->
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     
@@ -37,14 +42,15 @@
             'theme_location' => 'top'
         )); ?>
         </nav>
-        
-        <!--
+
         <div class="right_header">
-            <a href="" target="_blank">Ticket</a> |
-            <a href="" target="_blank">Donate</a> |
-            <a href="" target="_blank">Special Event</a> |
-            <a href="" target="_blank">Facebook</a>
-        </div>-->
+            <i id="nav_btn" class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <script>
+            $("#nav_btn").click(function(){
+               $("#menu-main").slideToggle(400);
+            });
+        </script>
     </div>
 </header>
     
