@@ -23,7 +23,8 @@ register_sidebars(1, array(
     'after_widget'  => '</div>',
 ));
 
-
+//enabling photo insert to Simple-Staff-List
+add_theme_support( 'post-thumbnails' );
 
 //Create fuction for Flexslider
 function get_flexslider(){
