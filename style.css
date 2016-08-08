@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h2{
-    font-size: 2.5rem;
+    font-size: 2.5em;
     margin-top: 10px;
 }
 
@@ -480,10 +480,79 @@ footer#main_footer{
 
 /* Photo, Video, and Costume Rental */
 
-/* Cast */
-
 /* Blog */
 
+/* Simple Staff List Plugin Styles 
+--------------------------------------------------------------- */
+
+/*  div wrapped around entire staff list  */
+div.staff-member-listing {
+}
+/*  div wrapped around each staff member  */
+div.staff-member {
+    float:left;
+    width:25%;
+    margin-left:6.25%;
+    padding-bottom: 2em;
+}        
+/*  "Even" staff member  */
+div.staff-member.even {
+}
+/*  "Odd" staff member  */
+div.staff-member.odd {
+    /*margin-top: 2em;*/
+}
+/*  Last staff member  
+div.staff-member.last {
+    padding-bottom: 0;
+    border: none;
+}*/
+/*  Wrap around staff info  */
+.staff-member-info-wrap {
+    float: left;
+    width: 100%;
+}
+/*  [staff-bio-formatted]  */
+    div.staff-member-bio {
+}
+/*  p tags within [staff-bio-formatted]  */
+    div.staff-member-bio p {
+}
+/*  [staff-photo]  */
+div.staff-member-photo {
+    background-position: center center;
+    background-size: cover;
+    box-sizing: border-box;
+    height: 160px;
+    max-height: 160px;
+    max-width: 160px;
+    overflow: hidden;
+    display: block;
+}        
+/*  [staff-email-link]  */
+.staff-member-email {
+}
+/*  [staff-name-formatted]  */
+div.staff-member-listing h3.staff-member-name {
+    margin: 0;
+    font-family: "Raleway",sans-serif;
+    font-size:1em;
+    text-align:center;
+}
+/*  [staff-position-formatted]  */
+div.staff-member-listing h4.staff-member-position {
+    margin: 0;
+    font-style: italic;
+}
+/* Clearfix for div.staff-member */
+div.staff-member:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* Clearfix for <= IE7 */
+* html div.staff-member { height: 1%; }
+div.staff-member { display: block; }
 
 
 /* Design for small desktop / tablet
