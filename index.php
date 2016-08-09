@@ -3,8 +3,10 @@
 <!-- start contnet -->
 <section class="main_section">
     <div class="row">
-        <!-- BEGIN CONTENTS -->
-        <?php if(have_posts()) : while (have_posts()) : the_post();?>
+        
+<!-- BEGIN CONTENTS -->
+<?php if(is_home()) : ?>
+    <?php if(have_posts()) : while (have_posts()) : the_post();?>
         <article class="excerpt">
             <a href="<?php the_permalink(); ?>" t><?php echo get_the_post_thumbnail($post->ID, 'thumbnail'); ?></a>
             <h1><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h1>
@@ -14,7 +16,15 @@
                 <a href="<?php the_permalink(); ?>"> Read More &raquo;</a> 
             </p>
         </article>
-        <?php endwhile; endif; ?>
+    <?php endwhile; endif; ?>
+<?php 
+else: 
+    if(have_posts()) : while (have_posts()) : the_post();
+    the_content(''); 
+    endwhile; endif; 
+endif; 
+?>
+        
     </div>
 </section>
 <!-- end content-->
