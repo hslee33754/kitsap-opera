@@ -6,7 +6,7 @@
     </div>
     <div class="right_footer">
         <small><address>
-            <class="tel">(360) 337-8199</class><br/>
+            <span class="tel">(360) 337-8199</span><br/>
             P.O. Box 1071, Bremerton, WA 98337
         </address></small>
         <small><nav><?php wp_nav_menu(array(
