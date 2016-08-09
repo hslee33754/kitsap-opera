@@ -492,6 +492,8 @@ footer a:link, footer a:visited, footer a:hover{
 #main_footer .left_footer{
     box-sizing: border-box;
     float: left;
+    padding-top:0;
+    padding-bottom:0;
 }
 
 #main_footer .right_footer{
