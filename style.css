@@ -135,9 +135,29 @@ h1, h2, h3, h4, h5, h6{
     margin-bottom: 10px;
 }
 
+h1 {
+   font-size:3.157em; 
+}
+
 h2{
-    font-size: 2.5em;
+    font-size:2.369em;
     margin-top: 10px;
+}
+
+h3 {
+    font-size:1.777em;
+}
+
+h4 {
+    font-size:1.333em;
+}
+
+h5 {
+    font-size:1em;
+}
+
+h6 {
+    font-size:0.75em;
 }
 
 h2:first-child{
@@ -391,6 +411,9 @@ aside .row{
     height: 120px;
 }
 
+#ai1ec_agenda_widget-2 h2 {
+    font-size:1.5em;
+}
 
 /* Contact Form Styles
 -------------------------------------------------------------- */
@@ -456,7 +479,7 @@ footer#main_footer{
     box-sizing: border-box;
     background-color: #000000;
     clear:both;
-    padding: 10px 20px;
+    padding: 20px 20px 0 20px;
     overflow: auto;
     color: white;
 }
@@ -480,12 +503,19 @@ footer a:link, footer a:visited, footer a:hover{
 #main_footer .logo{
     width: 175px;
 }
+
+.left_footer p {
+    margin-top:7px;
+    font-size:.6em;
+}
+
 #menu-footer{
-    margin-top: 10px;
+    margin-top:0;
     list-style: none;
 }
 #menu-footer li{
     display: inline-block;
+    font-size:.6em;
 }
 #menu-footer li::after{
     content: ' | '
@@ -493,7 +523,6 @@ footer a:link, footer a:visited, footer a:hover{
 #menu-footer li:last-child::after{
     content: none;
 }
-
 /* Photo, Video, and Costume Rental */
 
 /* Blog */
