@@ -98,4 +98,44 @@ function get_youtube_video($atts){
 
 add_shortcode( 'youtube', 'get_youtube_video');
 
-?>
+
+/* Create function for photo gallery using light box jquery*/
+
+function get_photos(){
+    $attachments = get_children( array(
+        'post_parent' => get_the_ID(),
+        'post_type' => 'attachment',
+        'order' => 'ASC'
+    ));
+    
+    if($attachments){
+        $photo='<div class="photo-container photo-gallery">';
+        
+        foreach ($attachments as $attachment_id => $attachment){
+            
+            $thePermalink = get_permalink($attachment_id);
+            $theUrl = wp_get_attachment_url($attachment_id);
+            $theCaption = get_post_field('post_excerpt', $attachment->ID);
+            
+            $photo .='
+            <div class="outter-photo-box">
+			<a href="' . $theUrl . '" title="'.$theTitle.'" target="_blank">
+			<div class="inner-photo-box"  style="background-image: url(' . $theUrl . '); ">
+			</div>
+			</a>
+			</div>
+            
+            ';            
+        }//end foreach
+        
+        $photo .= '</div>';
+            
+    }//end if
+    
+    
+    return $photo;
+    
+}//end get photos function
+
+
+add_shortcode( 'photos', 'get_photos');
