@@ -164,7 +164,7 @@ p {
 
 a:link, a:visited, a:hover{
     text-decoration: none;
-    color: #ffffff;
+    color: #4f161e;
 }
 
 /* header
@@ -175,6 +175,12 @@ header{
     padding: 20px;
     color: #ffffff;
 }
+
+header a:link, header a:visited, header a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
 .left_header{
     float:left;
 }
@@ -199,6 +205,11 @@ header{
 
 /* nav
 -------------------------------------------------------------- */
+nav a:link, nav a:visited, nav a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
 ul#menu-main{
     display: block;
     font-family: 'Raleway', sans-serif;
@@ -448,6 +459,11 @@ footer#main_footer{
     padding: 10px 20px;
     overflow: auto;
     color: white;
+}
+
+footer a:link, footer a:visited, footer a:hover{
+    text-decoration: none;
+    color: #fff;
 }
 
 #main_footer .left_footer{
