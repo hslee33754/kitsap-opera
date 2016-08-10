@@ -5,7 +5,7 @@
     <div class="row">
         
 <!-- BEGIN CONTENTS -->
-<?php if(is_home()) : ?>
+<?php if(is_home() || is_category()) : ?>
     <?php if(have_posts()) : while (have_posts()) : the_post();?>
         <article class="excerpt">
             <a href="<?php the_permalink(); ?>" t><?php echo get_the_post_thumbnail($post->ID, 'thumbnail'); ?></a>
