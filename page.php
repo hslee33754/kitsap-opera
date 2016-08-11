@@ -1,18 +1,21 @@
 <?php get_header(); ?>
 
-<!-- Start Content -->
-<div id="content" class="page">
+<!-- start contnet -->
+<section class="main_section">
+    <div class="row">
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <article id="page-content-<?php the_ID(); ?>" class="page-content">
-    <h2><?php the_title(); ?></h2>
-    <?php get_gateway_spotlights(); // get gateway page spotlights ?>
-    <?php the_content(''); // get written page content ?>
-     </article>
-	<?php endwhile; endif; ?>
-    <?php get_child_pages(); ?>
-        
-</div>
-<!-- End Content -->
+<!-- BEGIN CONTENTS -->
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <h1><?php the_title(); ?></h1>
+    <?php the_content(''); ?>
+<?php endwhile; endif; ?>
+<small>page.php</small>
+
+    </div>
+</section>
+<!-- end content-->
+
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
+
