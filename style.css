@@ -369,6 +369,18 @@ p.centered-text{
     width: 100%;
 }
 
+a.blk /* the post title links created by loop */ {
+    color:#000;
+}
+
+a.read-more /* the post read more links created by loop */ {
+    text-decoration: underline;
+}
+
+.read-more:hover {
+    color: #7e776b;
+}
+
 /* Responsive Video
 -------------------------------------------------------------- */
 .videoWrapper {
@@ -426,6 +438,21 @@ aside .row{
 #side-cta-ticket{
     background-color: #4f161e;
     height: 120px;
+}
+
+/* Calendar Widget Styles
+-------------------------------------------------------------- */
+
+.ai1ec-month {
+    background:#9e0b0f !important;
+}
+
+.ai1ec-event-title {
+    color:#000 !important;
+}
+
+.ai1ec-event-time {
+    color:#9e0b0f !important;
 }
 
 /* Contact Form Styles
