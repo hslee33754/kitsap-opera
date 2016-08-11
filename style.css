@@ -250,7 +250,7 @@ ul#menu-main > li > a{
     padding: 8px 10px;
 }
 
-ul#menu-main > li:hover, ul#menu-main > li.current-menu-item{
+ul#menu-main > li:hover, ul#menu-main > li.current-menu-item, ul#menu-main > li.current-menu-parent{
     background-color: #a10a0f;
 }
 
@@ -392,6 +392,10 @@ aside .row{
     margin-bottom: 0;
 }
 
+.widget h2{
+    font-size: 1.5em !important;
+}
+
 .widget_text h2{
     display: none;
 }
@@ -409,10 +413,6 @@ aside .row{
 #side-cta-ticket{
     background-color: #4f161e;
     height: 120px;
-}
-
-#ai1ec_agenda_widget-2 h2 {
-    font-size:1.5em;
 }
 
 /* Contact Form Styles
