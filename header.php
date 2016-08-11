@@ -15,10 +15,11 @@
     <link rel="stylesheet" href="<?php bloginfo('template_directory')?>/css/flexslider.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
     
-    <!--- Embed Font Awesome, Jquery, Flexslider -->
+    <!--- Embed Font Awesome, Jquery, Flexslider, magnnific-popup -->
     <script src="https://use.fontawesome.com/e1f89c6389.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
     <script src="<?php bloginfo('template_directory')?>/js/jquery.flexslider.js"></script>
+    <script src="<?php bloginfo('template_directory')?>/js/jquery.magnific-popup.js"></script>
 
     <!-- HTML5 shiv -->
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
