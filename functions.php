@@ -137,5 +137,48 @@ function get_photos(){
     
 }//end get photos function
 
-
 add_shortcode( 'photos', 'get_photos');
+
+/*
+* function for getting child pages on gateway page.
+* Use:
+* <?php echo get_my_child_pages(); ?>
+*/
+
+function get_my_child_pages() {
+
+	global $post;
+
+	rewind_posts(); // stop any previous loops
+	query_posts(array(
+        'post_type' => 'page',
+        'posts_per_page' => -1,
+        'post_status' => publish,
+        'post_parent' => $post->ID,
+        'order' => 'ASC',
+        'orderby' => 'menu_order'
+    )); // query and order child pages
+
+    $child = '<div class="child-excerpts">';
+
+    while (have_posts()) : the_post();
+
+		$childPermalink = get_permalink( $post->ID ); // post permalink
+		$childID = $post->ID; // post id
+		$childTitle = $post->post_title; // post title
+		$childExcerpt = $post->post_excerpt; // post excerpt
+
+        $child .= '
+        <article id="page-excerpt-'.$childID.'" class="page-excerpt">
+            <h3><a href="'.$childPermalink.'">'.$childTitle.' &raquo;</a></h3><p>'.$childExcerpt.' <a href="'.$childPermalink.'">Read More&nbsp;&raquo;</a></p>
+        </article>';
+
+	endwhile;
+
+    $child .= '</div>';
+
+    echo $child;
+
+	wp_reset_query(); // reset query
+
+}

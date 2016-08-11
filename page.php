@@ -4,12 +4,16 @@
 <section class="main_section">
     <div class="row">
 
-<!-- BEGIN CONTENTS -->
+<!-- start content loop -->
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <h1><?php the_title(); ?></h1>
     <?php the_content(''); ?>
 <?php endwhile; endif; ?>
-<small>page.php</small>
+<!-- end content loop -->
+
+<!-- start get child page for gateway pages -->
+<?php get_my_child_pages(); ?>
+<!-- end get child page for gateway pages -->
 
     </div>
 </section>
