@@ -289,6 +289,10 @@ ul.sub-menu > li > a {
     display: none;
 }
 
+.breadcrumbs {
+    padding:5px;
+}
+
 /* Carousel
 -------------------------------------------------------------- */
 .slider_container{
