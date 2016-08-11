@@ -23,6 +23,9 @@ register_sidebars(1, array(
     'after_widget'  => '</div>',
 ));
 
+// Create Page Excerpts
+add_post_type_support( 'page', 'excerpt' );
+
 //enabling photo insert to Simple-Staff-List
 add_theme_support( 'post-thumbnails' );
 
@@ -116,6 +119,7 @@ function get_photos(){
             $thePermalink = get_permalink($attachment_id);
             $theUrl = wp_get_attachment_url($attachment_id);
             $theCaption = get_post_field('post_excerpt', $attachment->ID);
+            $theTitle = get_the_title($attachment_id);
             
             $photo .='
             <div class="outter-photo-box">
@@ -170,7 +174,7 @@ function get_my_child_pages() {
 
         $child .= '
         <article id="page-excerpt-'.$childID.'" class="page-excerpt">
-            <h3><a href="'.$childPermalink.'">'.$childTitle.' &raquo;</a></h3><p>'.$childExcerpt.' <a href="'.$childPermalink.'">Read More&nbsp;&raquo;</a></p>
+            <h3 class="child-page-title"><a href="'.$childPermalink.'">'.$childTitle.'</a></h3><p>'.$childExcerpt.' <a href="'.$childPermalink.'">Read More&nbsp;&raquo;</a></p>
         </article>';
 
 	endwhile;

@@ -179,7 +179,7 @@ p {
 .row{
     clear:both;
     width: 100%;
-    overflow: auto;
+    overflow: hidden;
 }
 
 a:link, a:visited, a:hover{
@@ -295,6 +295,11 @@ ul.sub-menu > li > a {
 
 .child-excerpts {
     margin-top: 20px;
+}
+
+.child-page-title{
+    border-bottom: 1px solid #4f161e;
+    padding-bottom: 10px;
 }
 
 /* Carousel
@@ -471,6 +476,16 @@ aside .row{
     padding: 8px 10px;
     line-height: 1.2em;
     font-size: 14px;
+}
+
+/* Calendar Plug-in Overwrites
+-------------------------------------------------------------- */
+.ai1ec-oneday-view table.tablescroll_head th {
+    width: 100% !important;
+}
+
+.ai1ec-title-buttons .ai1ec-btn-group {
+    margin-left: 0 !important;
 }
 
 /* Donation Plug-in Overwrites
@@ -669,7 +684,7 @@ div.staff-member { display: block; }
         float: none;
         max-width: none;
         width: 100%;
-        padding: 10px 10px 0 10px;
+        padding: 10px;
     } 
     #main-cta-ticket{
         margin-right: 10px;
