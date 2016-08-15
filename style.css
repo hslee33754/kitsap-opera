@@ -184,7 +184,7 @@ p {
 
 a:link, a:visited, a:hover{
     text-decoration: none;
-    color: #4f161e;
+    color: #000;
 }
 
 /* header
@@ -369,12 +369,11 @@ p.centered-text{
     width: 100%;
 }
 
-a.blk /* the post title links created by loop */ {
-    color:#000;
+a.child-page-title /* the post title links created by loop */ {
+
 }
 
 a.read-more /* the post read more links created by loop */ {
-    text-decoration: underline;
 }
 
 .read-more:hover {
