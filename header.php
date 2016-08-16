@@ -38,13 +38,18 @@
         <div class="left_header">
             <a href="<?php bloginfo('url');?>"><img class="logo" alt="logo" src="<?php bloginfo('template_directory')?>/img/logo.jpg"></a>
         </div>
-        <nav>
+
+                    <div id="facebook">
+            <a target="blank" class="facebook-group" href="https://www.facebook.com/KitsapOpera/"><img src="<?php bloginfo ('url'); ?>/wp-content/uploads/2016/08/facebook-icon.png"/></a>
+        </div>
+        
+        <div class="right_header">
+                    <nav>
         <?php wp_nav_menu(array(
             'theme_location' => 'top'
         )); ?>
-        </nav>
 
-        <div class="right_header">
+        </nav>
             <i id="nav_btn" class="fa fa-bars" aria-hidden="true"></i>
         </div>
         <script>

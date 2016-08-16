@@ -207,23 +207,43 @@ header a:link, header a:visited, header a:hover{
 
 .right_header{
     float: right;
+    width:50%;
 }
 
+#facebook {
+    float:right;
+    background-repeat: no-repeat;
+    width:50px;
+    margin-top:8px;
+}
+#facebook img {
+    width:100%;
+}
 #menu-top{
-    float: right;
     list-style: none;
 }
+#menu-top ul {
+    padding:5px;
+}
 #menu-top li{
-    display: inline-block;
+    padding:5px 2px;
+    margin:12px 1% 5px 1%;
+    display: block;
+    float:left;
+    border:.5px solid white;
+    border-radius:3px;
 }
-#menu-top li::after{
+#menu-top li:first-of-type {
+    margin-left: 5%;
+}
+/* #menu-top li::after{
     content: ' | '
-}
+} */
 #menu-top li:last-child::after{
     content: none;
 }
 
-/* nav
+/* nav styles
 -------------------------------------------------------------- */
 nav a:link, nav a:visited, nav a:hover{
     text-decoration: none;
@@ -257,7 +277,6 @@ ul#menu-main > li:hover, ul#menu-main > li.current-menu-item, ul#menu-main > li.
 ul#menu-main > li:hover .sub-menu{
     display: block;
 }
-
 
 ul.sub-menu{
     display: none;
@@ -558,7 +577,7 @@ footer a:link, footer a:visited, footer a:hover{
 }
 
 .left_footer p {
-    margin-top:7px;
+    margin-top:6px;
     margin-bottom: 0;
     font-size:.6em;
 }
@@ -709,6 +728,7 @@ div.staff-member { display: block; }
 /* Design for tablet
 -------------------------------------------------------------- */
 @media screen and (max-width: 767px){  
+    
     #main_footer .right_footer, #main_footer .left_footer{
         width: 100%;
         clear: both;
@@ -720,13 +740,30 @@ div.staff-member { display: block; }
     footer small {
         line-height:2em;
     }
-    
+    .right_header {
+        width:45%;
+    }
+    #facebook {
+        width:40px;
+        margin-top:10px;
+    }
+    #menu-top li{
+        font-size:.8em;
+        margin-top:15px;
+    }
+    #menu-top li:first-of-type {
+        margin-left: 5%;
+    }
+}
 /* Design for Mobile
 -------------------------------------------------------------- */
 @media screen and (max-width: 600px){
     
     .menu-top-container{
         display: none;
+    }
+    #facebook {
+        display:none;
     }
     .breadcrumbs {
         width: 96%;
@@ -764,6 +801,7 @@ div.staff-member { display: block; }
     /* Responsive Nav */
     .right_header > #nav_btn{
         display: block;
+        float:right;
     }
 
     ul#menu-main{
