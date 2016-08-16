@@ -45,7 +45,7 @@
         </nav>
 
         <div class="right_header">
-            <i id="nav_btn" class="fa fa-bars" aria-hidden="true"></i>
+            <i id="nav_btn" class="fa fa-bars fa-2x" aria-hidden="true"></i>
         </div>
         <script>
             $("#nav_btn").click(function(){
