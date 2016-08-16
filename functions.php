@@ -101,6 +101,34 @@ function get_youtube_video($atts){
 
 add_shortcode( 'youtube', 'get_youtube_video');
 
+/*
+* functino for get main cta
+* Use: [cta]
+*/ s
+function get_main_cta(){
+    $main_cta = '
+    <div class="row main-cta-wrapper">
+        <a hre="#">
+            <div class="main-cta">
+                <div id="main-cta-ticket">
+                    <p class="centered-text">Buy Tickets</p>
+                </div>
+            </div>
+        </a>
+        <a hre="#">
+            <div class="main-cta">
+                <div id="main-cta-donate">
+                    <p class="centered-text">Donate Now</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    ';
+
+    return $main_cta;
+}
+
+add_shortcode( 'cta', 'get_main_cta');
 
 /* Create function for photo gallery using light box jquery*/
 
