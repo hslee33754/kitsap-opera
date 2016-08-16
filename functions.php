@@ -104,7 +104,7 @@ add_shortcode( 'youtube', 'get_youtube_video');
 /*
 * functino for get main cta
 * Use: [cta]
-*/ s
+*/
 function get_main_cta(){
     $main_cta = '
     <div class="row main-cta-wrapper">
