@@ -184,7 +184,7 @@ p {
 
 a:link, a:visited, a:hover{
     text-decoration: none;
-    color: #000;
+    color: #777;
 }
 
 /* header
@@ -193,7 +193,7 @@ header{
     font-family: 'Raleway', sans-serif;
     background-color: #000000;
     padding: 20px;
-    color: #ffffff;
+    color: #fff;
 }
 
 header a:link, header a:visited, header a:hover{
@@ -691,7 +691,7 @@ div.staff-member:after {
 div.staff-member { display: block; }
 
 
-/* Design for small desktop / tablet
+/* Design for small desktop
 -------------------------------------------------------------- */
 @media screen and (max-width: 960px){
     .main_section{
@@ -700,7 +700,27 @@ div.staff-member { display: block; }
     aside{
         padding-right: 20px;
     }
-
+    .widget_text p:first-child{
+        font-size: 1.6rem;
+    }
+    .textwidget .wpcf7::before{
+    font-size: 1.6rem;
+    }  
+/* Design for tablet
+-------------------------------------------------------------- */
+@media screen and (max-width: 767px){  
+    #main_footer .right_footer, #main_footer .left_footer{
+        width: 100%;
+        clear: both;
+        text-align: center;
+    }
+    footer address {
+        line-height:1em;
+    }
+    footer small {
+        line-height:2em;
+    }
+    
 /* Design for Mobile
 -------------------------------------------------------------- */
 @media screen and (max-width: 600px){
@@ -708,10 +728,17 @@ div.staff-member { display: block; }
     .menu-top-container{
         display: none;
     }
+    .breadcrumbs {
+        width: 96%;
+        margin-left:2%;
+        margin-right:2%;
+    }
     .main_section, aside{
         float: none;
         max-width: none;
-        width: 100%;
+        width: 96%;
+        margin-left:2%;
+        margin-right:2%;
         padding: 10px;
     } 
     #main-cta-ticket{
@@ -724,15 +751,14 @@ div.staff-member { display: block; }
     .side-cta{
         display: none;   
     }
-    
-    footer nav{
-        display: none;
+    .textwidget .wpcf7::before{
+    font-size: 2.5rem;
     }
-    
-    #main_footer .right_footer, #main_footer .left_footer{
-        width: 100%;
-        clear: both;
-        text-align: center;
+    footer img.logo {
+        display:none;
+    }
+    footer nav {
+        display:none;
     }
     
     /* Responsive Nav */
