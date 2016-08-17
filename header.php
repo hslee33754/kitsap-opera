@@ -44,14 +44,14 @@
         </div>
         
         <div class="right_header">
-                    <nav>
-        <?php wp_nav_menu(array(
-            'theme_location' => 'top'
-        )); ?>
-
-        </nav>
+            <nav>
+            <?php wp_nav_menu(array(
+                'theme_location' => 'top'
+            )); ?>
+            </nav>
             <i id="nav_btn" class="fa fa-bars" aria-hidden="true"></i>
         </div>
+        
         <script>
             $("#nav_btn").click(function(){
                $("#menu-main").slideToggle(400);
