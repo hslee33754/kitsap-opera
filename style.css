@@ -208,6 +208,7 @@ header a:link, header a:visited, header a:hover{
 .right_header{
     float: right;
     width:50%;
+    margin-top:-7px;
 }
 
 #facebook {
@@ -223,18 +224,22 @@ header a:link, header a:visited, header a:hover{
     list-style: none;
 }
 #menu-top ul {
-    padding:5px;
 }
 #menu-top li{
-    padding:5px 2px;
+    text-align:center;
+    width:20%;
+    padding:16px 5px;
     margin:12px 1% 5px 1%;
     display: block;
     float:left;
     border:.5px solid white;
     border-radius:3px;
 }
+#menu-top li:last-of-type {
+    padding:5px 5px;
+}
 #menu-top li:first-of-type {
-    margin-left: 5%;
+    margin-left:20%;
 }
 /* #menu-top li::after{
     content: ' | '
@@ -751,8 +756,8 @@ div.staff-member { display: block; }
         font-size:.8em;
         margin-top:15px;
     }
-    #menu-top li:first-of-type {
-        margin-left: 5%;
+    #menu-top li:last-of-type {
+        padding:7px 5px;
     }
 }
 /* Design for Mobile
