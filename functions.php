@@ -111,14 +111,14 @@ function get_main_cta(){
         <a hre="#">
             <div class="main-cta">
                 <div id="main-cta-ticket">
-                    <p class="centered-text">Buy Tickets</p>
+                    <a href="#"><p class="centered-text">Buy Tickets</p></a>
                 </div>
             </div>
         </a>
         <a hre="#">
             <div class="main-cta">
                 <div id="main-cta-donate">
-                    <p class="centered-text">Donate Now</p>
+                    <a href="'.site_url().'/donation/"><p class="centered-text">Donate Now</p></a>
                 </div>
             </div>
         </a>
